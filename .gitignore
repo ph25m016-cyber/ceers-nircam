@@ -6,3 +6,7 @@ logs/
 uncals/
 nircam1_f115w/uncals/
 nircam1_f115w/crds_cache/
+__pycache__/
+initial_8_manifest.txt
+nircam1_f115w/
+test_pipeline.py
