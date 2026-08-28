@@ -5,7 +5,7 @@ from snowball_run_pipeline import detector1_with_snowball_correction
 
 #################################
 ### SET I/O AND OTHER SETUP HERE 
-UNCALDIR = 'uncals'
+UNCALDIR = 'nircam1_f115w/uncals'
 OUTPUTDIR = 'calibrated'
 # Fraction of available cores to use for multi-processing for Ramp Fitting 
 # step (argument = 'maximum_cores'). Options are 'none' (no multi-processing),
@@ -61,6 +61,8 @@ def main():
 
     # Get dataset ID string for interim file outputs
     dataset = uncalfile.split('_uncal.fits')[0]
+    print("uncalfile =", uncalfile)
+    print("dataset   =", dataset)
     run_detector1_and_snowballs(dataset, UNCALDIR, OUTPUTDIR, MAXCORES)
                 
 

@@ -21,6 +21,7 @@ import numpy as np
 from astropy.io import fits
 import os
 
+
 from snowball_mask import snowball_mask_groupdq
 
 # Pipeline imports
@@ -29,7 +30,7 @@ from jwst.pipeline import Detector1Pipeline
 from jwst.ramp_fitting import RampFitStep
 
 
-def run_pipeline_to_create_ramp(dataset,output_dir="."):
+def run_pipeline_to_create_ramp(input_file, output_dir="."):
     # Instantiate the pipeline step 1
     d1p = Detector1Pipeline()
 
@@ -39,8 +40,17 @@ def run_pipeline_to_create_ramp(dataset,output_dir="."):
     d1p.save_calibrated_ramp = True
     d1p.save_results = True
     d1p.output_dir = output_dir
+    import os
 
-    result = d1p.run(f"{dataset}_uncal.fits")
+    print("Current directory :", os.getcwd())
+    print("Input file        :", input_file)
+    print("Absolute path     :", os.path.abspath(input_file))
+    print("Exists?           :", os.path.exists(input_file))
+    d1p.log.setLevel("DEBUG")
+
+    print("Starting Detector1Pipeline...")
+    result = d1p.run(input_file)
+    print("Detector1Pipeline finished.")
 
     return result
 
@@ -51,6 +61,9 @@ def make_snowball_mask(rampfile):
     groupdq = hdu['GROUPDQ'].data
     # Make the snowball mask
     snowball_mask, new_groupdq = snowball_mask_groupdq(groupdq)
+    print("Original flagged pixels :", (groupdq != 0).sum())
+    print("Snowball pixels added   :", snowball_mask.sum())
+    print("New flagged pixels      :", (new_groupdq != 0).sum())
     # Substitute this new groupdq file and write the ramp file back out
     hdu['GROUPDQ'].data = new_groupdq
     hdu.writeto(rampfile,overwrite=True)
@@ -79,8 +92,16 @@ def run_ramp_fitting(datadir,dataset,rampfile,maxcores,output_dir="."):
 
 def detector1_with_snowball_correction(dataset,input_dir=".",output_dir=".",maxcores='none'):
     # Run the pipeline the first time
-    input_file = os.path.join(input_dir,f"{dataset}")
+    print("input_dir =", input_dir)
+    print("dataset   =", dataset)
+
+    input_file = os.path.join(input_dir, f"{dataset}_uncal.fits")
+
+    print("input_file =", input_file)
     result = run_pipeline_to_create_ramp(input_file,output_dir=output_dir)
+
+    print("\nContents of output directory:")
+    print(os.listdir(output_dir))
 
     # Revise the ramp file to put in the snowball mask
     rampfile = os.path.join(output_dir,f"{dataset}_ramp.fits")
