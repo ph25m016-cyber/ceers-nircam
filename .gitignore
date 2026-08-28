@@ -1,4 +1,8 @@
-*.swp
-
-__pycache__/
-*$py.class
+# Downloaded JWST data, CRDS cache, and generated pipeline products
+*.fits
+calibrated/
+test_output/
+logs/
+uncals/
+nircam1_f115w/uncals/
+nircam1_f115w/crds_cache/
