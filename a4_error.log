@@ -1,0 +1,453 @@
+2026-09-14 23:46:13,572 - stpipe.Detector1Pipeline - INFO - Detector1Pipeline instance created.
+2026-09-14 23:46:13,572 - stpipe.Detector1Pipeline.group_scale - INFO - GroupScaleStep instance created.
+2026-09-14 23:46:13,573 - stpipe.Detector1Pipeline.dq_init - INFO - DQInitStep instance created.
+2026-09-14 23:46:13,573 - stpipe.Detector1Pipeline.emicorr - INFO - EmiCorrStep instance created.
+2026-09-14 23:46:13,573 - stpipe.Detector1Pipeline.saturation - INFO - SaturationStep instance created.
+2026-09-14 23:46:13,573 - stpipe.Detector1Pipeline.ipc - INFO - IPCStep instance created.
+2026-09-14 23:46:13,574 - stpipe.Detector1Pipeline.superbias - INFO - SuperBiasStep instance created.
+2026-09-14 23:46:13,574 - stpipe.Detector1Pipeline.refpix - INFO - RefPixStep instance created.
+2026-09-14 23:46:13,574 - stpipe.Detector1Pipeline.rscd - INFO - RscdStep instance created.
+2026-09-14 23:46:13,574 - stpipe.Detector1Pipeline.firstframe - INFO - FirstFrameStep instance created.
+2026-09-14 23:46:13,574 - stpipe.Detector1Pipeline.lastframe - INFO - LastFrameStep instance created.
+2026-09-14 23:46:13,575 - stpipe.Detector1Pipeline.linearity - INFO - LinearityStep instance created.
+2026-09-14 23:46:13,575 - stpipe.Detector1Pipeline.dark_current - INFO - DarkCurrentStep instance created.
+2026-09-14 23:46:13,575 - stpipe.Detector1Pipeline.reset - INFO - ResetStep instance created.
+2026-09-14 23:46:13,575 - stpipe.Detector1Pipeline.persistence - INFO - PersistenceStep instance created.
+2026-09-14 23:46:13,576 - stpipe.Detector1Pipeline.charge_migration - INFO - ChargeMigrationStep instance created.
+2026-09-14 23:46:13,576 - stpipe.Detector1Pipeline.jump - INFO - JumpStep instance created.
+2026-09-14 23:46:13,576 - stpipe.Detector1Pipeline.ramp_fit - INFO - RampFitStep instance created.
+2026-09-14 23:46:13,577 - stpipe.Detector1Pipeline.gain_scale - INFO - GainScaleStep instance created.
+2026-09-14 23:46:13,608 - stpipe.Detector1Pipeline - INFO - Step Detector1Pipeline running with args ('nircam1_f115w/uncals/jw01345001001_02201_00001_nrca4_uncal.fits',).
+2026-09-14 23:46:13,617 - stpipe.Detector1Pipeline - INFO - Step Detector1Pipeline parameters are:
+  pre_hooks: []
+  post_hooks: []
+  output_file: None
+  output_dir: calibrated
+  output_ext: .fits
+  output_use_model: False
+  output_use_index: True
+  save_results: True
+  skip: False
+  suffix: None
+  search_output_file: True
+  input_dir: ''
+  save_calibrated_ramp: True
+  steps:
+    group_scale:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    dq_init:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    emicorr:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: True
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      save_intermediate_results: False
+      user_supplied_reffile: None
+      nints_to_phase: None
+      nbins: None
+      scale_reference: True
+    saturation:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      n_pix_grow_sat: 1
+    ipc:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    superbias:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    refpix:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      odd_even_columns: True
+      use_side_ref_pixels: True
+      side_smoothing_length: 11
+      side_gain: 1.0
+      odd_even_rows: True
+      ovr_corr_mitigation_ftr: 3.0
+    rscd:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      type: baseline
+    firstframe:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    lastframe:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    linearity:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    dark_current:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      dark_output: None
+    reset:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+    persistence:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      input_trapsfilled: ''
+      flag_pers_cutoff: 40.0
+      save_persistence: False
+      save_trapsfilled: True
+    charge_migration:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: True
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      signal_threshold: 25000.0
+    jump:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: False
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      rejection_threshold: 4.0
+      three_group_rejection_threshold: 6.0
+      four_group_rejection_threshold: 5.0
+      maximum_cores: '1'
+      flag_4_neighbors: True
+      max_jump_to_flag_neighbors: 1000.0
+      min_jump_to_flag_neighbors: 10.0
+      after_jump_flag_dn1: 0.0
+      after_jump_flag_time1: 0.0
+      after_jump_flag_dn2: 0.0
+      after_jump_flag_time2: 0.0
+      expand_large_events: False
+      min_sat_area: 1.0
+      min_jump_area: 5.0
+      expand_factor: 2.0
+      use_ellipses: False
+      sat_required_snowball: True
+      min_sat_radius_extend: 2.5
+      sat_expand: 2
+      edge_size: 25
+      find_showers: False
+      extend_snr_threshold: 1.2
+      extend_min_area: 90
+      extend_inner_radius: 1.0
+      extend_outer_radius: 2.6
+      extend_ellipse_expand_ratio: 1.1
+      time_masked_after_shower: 15.0
+      max_extended_radius: 200
+      minimum_groups: 3
+      minimum_sigclip_groups: 100
+      only_use_ints: True
+    ramp_fit:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: True
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+      int_name: ''
+      save_opt: False
+      opt_name: ''
+      suppress_one_group: True
+      maximum_cores: '1'
+    gain_scale:
+      pre_hooks: []
+      post_hooks: []
+      output_file: None
+      output_dir: None
+      output_ext: .fits
+      output_use_model: False
+      output_use_index: True
+      save_results: False
+      skip: True
+      suffix: None
+      search_output_file: True
+      input_dir: ''
+2026-09-14 23:46:13,952 - stpipe.Detector1Pipeline - INFO - Prefetching reference files for dataset: 'jw01345001001_02201_00001_nrca4_uncal.fits' reftypes = ['dark', 'gain', 'ipc', 'linearity', 'mask', 'persat', 'readnoise', 'refpix', 'reset', 'rscd', 'saturation', 'superbias', 'trapdensity', 'trappars']
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for DARK reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_dark_0334.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for GAIN reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_gain_0096.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for IPC reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_ipc_0021.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for LINEARITY reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_linearity_0055.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for MASK reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_mask_0066.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for PERSAT reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_persat_0030.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for READNOISE reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_readnoise_0248.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for REFPIX reference file is 'N/A'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for RESET reference file is 'N/A'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for RSCD reference file is 'N/A'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for SATURATION reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_saturation_0099.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for SUPERBIAS reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_superbias_0212.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for TRAPDENSITY reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_trapdensity_0002.fits'.
+2026-09-14 23:46:16,492 - stpipe.Detector1Pipeline - INFO - Prefetch for TRAPPARS reference file is '/Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_trappars_0004.fits'.
+2026-09-14 23:46:16,493 - stpipe.Detector1Pipeline - INFO - Starting calwebb_detector1 ...
+2026-09-14 23:46:16,640 - stpipe.Detector1Pipeline.group_scale - INFO - Step group_scale running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:16,685 - stpipe.Detector1Pipeline.group_scale - INFO - NFRAMES and FRMDIVSR are equal; correction not needed
+2026-09-14 23:46:16,685 - stpipe.Detector1Pipeline.group_scale - INFO - Step will be skipped
+2026-09-14 23:46:16,686 - stpipe.Detector1Pipeline.group_scale - INFO - Step group_scale done
+2026-09-14 23:46:16,716 - stpipe.Detector1Pipeline.dq_init - INFO - Step dq_init running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:16,729 - stpipe.Detector1Pipeline.dq_init - INFO - Using MASK reference file /Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_mask_0066.fits
+2026-09-14 23:46:16,774 - stpipe.Detector1Pipeline.dq_init - WARNING - Keyword RESERVED_4 does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:16,799 - stpipe.Detector1Pipeline.dq_init - WARNING - Keyword UNRELIABLE_RESET does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:16,882 - stpipe.Detector1Pipeline.dq_init - INFO - Step dq_init done
+2026-09-14 23:46:16,913 - stpipe.Detector1Pipeline.saturation - INFO - Step saturation running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:16,924 - stpipe.Detector1Pipeline.saturation - INFO - Using SATURATION reference file /Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_saturation_0099.fits
+2026-09-14 23:46:16,968 - stpipe.Detector1Pipeline.saturation - WARNING - Keyword RESERVED_4 does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:17,008 - stpipe.Detector1Pipeline.saturation - WARNING - Keyword UNRELIABLE_RESET does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:17,420 - stpipe.Detector1Pipeline.saturation - INFO - Detected 663 saturated pixels
+2026-09-14 23:46:17,426 - stpipe.Detector1Pipeline.saturation - INFO - Detected 0 A/D floor pixels
+2026-09-14 23:46:17,434 - stpipe.Detector1Pipeline.saturation - INFO - Step saturation done
+2026-09-14 23:46:17,466 - stpipe.Detector1Pipeline.ipc - INFO - Step ipc running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:17,476 - stpipe.Detector1Pipeline.ipc - INFO - Using IPC reference file /Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_ipc_0021.fits
+2026-09-14 23:46:17,714 - stpipe.Detector1Pipeline.ipc - INFO - Step ipc done
+2026-09-14 23:46:17,743 - stpipe.Detector1Pipeline.superbias - INFO - Step superbias running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:17,754 - stpipe.Detector1Pipeline.superbias - INFO - Using SUPERBIAS reference file /Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_superbias_0212.fits
+2026-09-14 23:46:17,913 - stpipe.Detector1Pipeline.superbias - INFO - Step superbias done
+2026-09-14 23:46:17,944 - stpipe.Detector1Pipeline.refpix - INFO - Step refpix running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - NIR full frame data
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - The following parameters are valid for this mode:
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - use_side_ref_pixels = True
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - odd_even_columns = True
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - side_smoothing_length = 11
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - side_gain = 1.0
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - The following parameter is not applicable and is ignored:
+2026-09-14 23:46:17,982 - stpipe.Detector1Pipeline.refpix - INFO - odd_even_rows = False
+2026-09-14 23:46:18,523 - stpipe.Detector1Pipeline.refpix - INFO - Step refpix done
+2026-09-14 23:46:18,557 - stpipe.Detector1Pipeline.linearity - INFO - Step linearity running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:18,568 - stpipe.Detector1Pipeline.linearity - INFO - Using Linearity reference file /Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_linearity_0055.fits
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_DO_NOT_USE does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_NO_LIN_SAMP does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_BAD_LIN_FIT does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_NO_WELL_SAMP does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_MODEL_FIT_FAIL does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_WELL_NOT_DEFINED does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:18,655 - stpipe.Detector1Pipeline.linearity - WARNING - Keyword UAZ_MASTER_MASK does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:19,046 - stpipe.Detector1Pipeline.linearity - INFO - Step linearity done
+2026-09-14 23:46:19,076 - stpipe.Detector1Pipeline.persistence - INFO - Step persistence running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:19,181 - stpipe.Detector1Pipeline.persistence - WARNING - Keyword WEIRD does not correspond to an existing DQ mnemonic, so will be ignored
+2026-09-14 23:46:19,988 - stpipe.Detector1Pipeline.persistence - INFO - Saved model in calibrated/jw01345001001_02201_00001_nrca4_trapsfilled.fits
+2026-09-14 23:46:19,997 - stpipe.Detector1Pipeline.persistence - INFO - Step persistence done
+2026-09-14 23:46:20,028 - stpipe.Detector1Pipeline.dark_current - INFO - Step dark_current running with args (<RampModel(1, 5, 2048, 2048) from jw01345001001_02201_00001_nrca4_uncal.fits>,).
+2026-09-14 23:46:20,039 - stpipe.Detector1Pipeline.dark_current - INFO - Using DARK reference file /Users/gayathrykj/crds_cache/references/jwst/nircam/jwst_nircam_dark_0334.fits
+2026-09-14 23:46:20,042 - stpipe.Detector1Pipeline.dark_current - WARNING - /opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/astropy/io/fits/file.py:431: AstropyUserWarning: File may have been truncated: actual file length (1233125376) is smaller than the expected size (3137351040)
+  warnings.warn(
+
+uncalfile = jw01345001001_02201_00001_nrca4_uncal.fits
+dataset   = jw01345001001_02201_00001_nrca4
+input_dir = nircam1_f115w/uncals
+dataset   = jw01345001001_02201_00001_nrca4
+input_file = nircam1_f115w/uncals/jw01345001001_02201_00001_nrca4_uncal.fits
+Current directory : /Users/gayathrykj/project_LRD/ceers_pipeline
+Input file        : nircam1_f115w/uncals/jw01345001001_02201_00001_nrca4_uncal.fits
+Absolute path     : /Users/gayathrykj/project_LRD/ceers_pipeline/nircam1_f115w/uncals/jw01345001001_02201_00001_nrca4_uncal.fits
+Exists?           : True
+Starting Detector1Pipeline...
+Traceback (most recent call last):
+  File "/Users/gayathrykj/project_LRD/ceers_pipeline/snowball_wrapper.py", line 71, in <module>
+    main()
+  File "/Users/gayathrykj/project_LRD/ceers_pipeline/snowball_wrapper.py", line 66, in main
+    run_detector1_and_snowballs(dataset, UNCALDIR, OUTPUTDIR, MAXCORES)
+  File "/Users/gayathrykj/project_LRD/ceers_pipeline/snowball_wrapper.py", line 24, in run_detector1_and_snowballs
+    detector1_with_snowball_correction(dataset, input_dir=inputdir,
+  File "/Users/gayathrykj/project_LRD/ceers_pipeline/snowball_run_pipeline.py", line 101, in detector1_with_snowball_correction
+    result = run_pipeline_to_create_ramp(input_file,output_dir=output_dir)
+  File "/Users/gayathrykj/project_LRD/ceers_pipeline/snowball_run_pipeline.py", line 52, in run_pipeline_to_create_ramp
+    result = d1p.run(input_file)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stpipe/step.py", line 509, in run
+    step_result = self.process(*args)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/jwst/pipeline/calwebb_detector1.py", line 123, in process
+    input = self.dark_current(input)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stpipe/step.py", line 509, in run
+    step_result = self.process(*args)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/jwst/dark_current/dark_current_step.py", line 54, in process
+    dark_model = datamodels.DarkModel(self.dark_name)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/jwst/datamodels/dark.py", line 30, in __init__
+    super(DarkModel, self).__init__(init=init, **kwargs)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/jwst/datamodels/reference.py", line 22, in __init__
+    super(ReferenceFileModel, self).__init__(init=init, **kwargs)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/model_base.py", line 241, in __init__
+    asdffile = fits_support.from_fits(
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/fits_support.py", line 701, in from_fits
+    known_keywords, known_datas = _load_from_schema(
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/fits_support.py", line 621, in _load_from_schema
+    mschema.walk_schema(schema, callback)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/schema.py", line 149, in walk_schema
+    recurse(schema, [], None, ctx)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/schema.py", line 137, in recurse
+    recurse(val, path + [key], combiner, ctx)  # noqa: F821
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/schema.py", line 124, in recurse
+    if callback(schema, path, combiner, ctx, recurse):  # noqa: F821
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/fits_support.py", line 599, in callback
+    result = _fits_array_loader(
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/fits_support.py", line 551, in _fits_array_loader
+    return from_fits_hdu(hdu, schema, context._cast_fits_arrays)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/stdatamodels/fits_support.py", line 783, in from_fits_hdu
+    data = hdu.data
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/astropy/utils/decorators.py", line 837, in __get__
+    val = self.fget(obj)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/astropy/io/fits/hdu/image.py", line 250, in data
+    data = self._get_scaled_image_data(self._data_offset, self.shape)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/astropy/io/fits/hdu/image.py", line 809, in _get_scaled_image_data
+    raw_data = self._get_raw_data(shape, code, offset)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/astropy/io/fits/hdu/base.py", line 547, in _get_raw_data
+    return self._file.readarray(offset=offset, dtype=code, shape=shape)
+  File "/opt/anaconda3/envs/bagley_stage1/lib/python3.10/site-packages/astropy/io/fits/file.py", line 385, in readarray
+    data.shape = shape
+ValueError: cannot reshape array of size 308278464 into shape (187,2048,2048)
